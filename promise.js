@@ -105,39 +105,4 @@ let add = function(x, y) {
    
     
       
-      let subtract = function(x, y) {
-        return new Promise((resolve, reject) => {
-          let sum = x - y;
-          if (sum) {
-            resolve(sum);
-          }
-          else {
-            reject(Error("Could not subtract the two values!"));
-          }
-        });
-      };
-      
-     
-      add(2,2)
-        .then((added) => {
-          
-          return subtract(added, 3);
-        })
-        .then((subtracted) => {
-          
-          return add(subtracted, 5);
-        })
-        .then((added) => {
-          
-          return added * 2;    
-        })
-        .then((result) => {
-          
-          console.log("My result is ", result);
-        })
-        .catch((err) => {
-         
-          console.log(err);
-        });
-    
-    
+   
